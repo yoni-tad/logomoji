@@ -1,10 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import LogoPreview from "./components/LogoPreview";
-import twemoji from "twemoji";
 import EmojiBoard from "./components/EmojiBoard";
 import ControlsPanel from "./components/ControlsPanel";
-import domtoimage from "dom-to-image-more";
-import html2canvas from "html2canvas";
 
 export default function App() {
   const [selectedEmoji, setSelectedEmoji] = useState("🚀");
@@ -17,13 +14,6 @@ export default function App() {
   const handleDownload = async () => {
     const canvas = boarderRef.current;
 
-
-    // const canvas = await html2canvas(boarderRef.current, {
-    //   scale: 2,
-    //   backgroundColor: null,
-    // });
-    // const image = canvas.toDataURL("image/png");
-
     const link = document.createElement("a");
     link.href = canvas.toDataURL("image/png");
     link.download = "logomoji.png";
@@ -31,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 h-screen">
+    <div className="flex flex-col gap-4 p-4 h-screen max-w-md">
       {/* nav bar */}
       <div className="sticky top-0 z-50">
         <div className="flex justify-between items-center py-4">
