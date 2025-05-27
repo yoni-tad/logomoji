@@ -17,7 +17,9 @@ export default function EmojiBoard(props) {
           return (
             <p
               key={emoji}
-              onClick={() => props.select(emoji)}
+              onClick={() => {
+                props.select(emoji), setShowEmoji(false);
+              }}
               className={
                 "cursor-pointer p-2 px-6 text-center rounded-lg " +
                 (emoji === props.emoji ? "bg-pink-400" : "bg-pink-200")
@@ -28,7 +30,7 @@ export default function EmojiBoard(props) {
           );
         })}
         <p
-          onClick={() => setShowEmoji(true)}
+          onClick={() => setShowEmoji(!isShowEmoji)}
           className="cursor-pointer p-2 px-6 text-center rounded-lg bg-black text-white"
         >
           All
@@ -37,7 +39,7 @@ export default function EmojiBoard(props) {
 
       {isShowEmoji && (
         <div className="p-4">
-          <EmojiPicker onEmojiClick={selectEmojiHandler} />
+          <EmojiPicker onEmojiClick={selectEmojiHandler} className="max-w-62" />
         </div>
       )}
     </div>

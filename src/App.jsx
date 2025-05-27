@@ -21,33 +21,19 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col justify-center gap-4 pt-4 px-4 h-screen max-w-md">
+    <div className="flex flex-col justify-center items-center gap-4 pt-4 px-4 h-screen max-w-md">
+      {/* nav bar */}
+      <div className="sticky z-50 flex justify-center items-center">
+        <LogoPreview
+          boarderRef={boarderRef}
+          bgColor={bgColor}
+          borderRadius={borderRadius}
+          emoji={selectedEmoji}
+          iconSize={iconSize}
+          padding={padding}
+        />
+      </div>
       <div className="overflow-y-auto overflow-x-hidden hide-scrollbar">
-        {/* nav bar */}
-        <div className="z-50">
-          {/* <div className="flex justify-between items-center py-4">
-          <p className="text-2xl font-semibold">Logomoji</p>
-          <a href="https://github.com/yoni-tad/logomoji" target="_tab">
-            <svg
-              className="h-6 w-6"
-              fill="#000000"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              data-name="Layer 1"
-            >
-              <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z" />
-            </svg>
-          </a>
-        </div> */}
-          <LogoPreview
-            boarderRef={boarderRef}
-            bgColor={bgColor}
-            borderRadius={borderRadius}
-            emoji={selectedEmoji}
-            iconSize={iconSize}
-            padding={padding}
-          />
-        </div>
         <div className="flex-1">
           <EmojiBoard emoji={selectedEmoji} select={setSelectedEmoji} />
           <ControlsPanel
@@ -61,9 +47,9 @@ export default function App() {
             setPadding={setPadding}
           />
         </div>
-        <p className="text-pink-500 text-center">Built by @yonitad0</p>
+        <p className="text-pink-500 text-center mt-6">Built by @yonitad0</p>
       </div>
-      <div className="sticky bottom-0 z-50 mb-2">
+      <div className="sticky bottom-0 z-50 mb-2 w-full">
         <button
           onClick={handleDownload}
           className="w-full bg-pink-400 hover:bg-pink-300 py-2 px-4 text-xl font-semibold rounded-xl"
