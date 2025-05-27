@@ -22,14 +22,14 @@ export default function App() {
 
   return (
     <div className="flex flex-col justify-center gap-4 p-4 h-screen max-w-md">
-      <div className="overflow-y-auto overflow-x-hidden">
+      <div className="overflow-y-auto overflow-x-hidden hide-scrollbar">
       {/* nav bar */}
       <div className="z-50">
         <div className="flex justify-between items-center py-4">
-          <p className="text-3xl font-semibold">Logomoji</p>
+          <p className="text-2xl font-semibold">Logomoji</p>
           <a href="https://github.com/yoni-tad/logomoji" target="_tab">
             <svg
-              className="h-8 w-8"
+              className="h-6 w-6"
               fill="#000000"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export default function App() {
       <div className="sticky bottom-0 z-50">
         <button
           onClick={handleDownload}
-          className="w-full bg-pink-400 hover:bg-pink-300 py-3 px-4 text-xl font-semibold rounded-xl"
+          className="w-full bg-pink-400 hover:bg-pink-300 py-2 px-4 text-xl font-semibold rounded-xl"
         >
           Download
         </button>
