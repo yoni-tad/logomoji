@@ -23,7 +23,7 @@ export default function App() {
   return (
     <div className="flex flex-col gap-4 p-4 h-screen max-w-md">
       {/* nav bar */}
-      <div className="sticky top-0 z-50">
+      <div className="z-50">
         <div className="flex justify-between items-center py-4">
           <p className="text-3xl font-semibold">Logomoji</p>
           <a href="https://github.com/yoni-tad/logomoji" target="_tab">
