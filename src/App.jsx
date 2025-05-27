@@ -47,7 +47,7 @@ export default function App() {
             setPadding={setPadding}
           />
         </div>
-        <p className="text-pink-500 text-center mt-6">Built by @yonitad0</p>
+        <a href="https://t.me/yonitad0" className="flex items-center justify-center text-pink-500 text-center mt-6">Built by @yonitad0</a>
       </div>
       <div className="sticky bottom-0 z-50 mb-2 w-full">
         <button
