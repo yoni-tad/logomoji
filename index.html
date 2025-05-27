@@ -1,14 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logomoji | Emoji to Logo</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <script>
+      window.onload = function () {
+        Telegram.WebApp.ready();
+        Telegram.WebApp.setHeaderColor("#fff");
+        Telegram.WebApp.setBackgroundColor("#fff");
+        Telegram.WebApp.expand();
+      };
+    </script>
   </head>
   <body class="bg-white">
-    <div id="root" class="flex justify-center"></div>
+    <div id="root" class="flex justify-center items-center"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

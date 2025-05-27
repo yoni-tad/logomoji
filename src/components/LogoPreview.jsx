@@ -8,8 +8,8 @@ export default function LogoPreview(props) {
   const iconSize = props.iconSize;
   const padding = props.padding;
 
-  const width = 350;
-  const height = 350;
+  const width = 300;
+  const height = 300;
 
   useEffect(() => {
     const canvas = boarderRef.current;

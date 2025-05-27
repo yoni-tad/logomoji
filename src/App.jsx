@@ -47,7 +47,7 @@ export default function App() {
           padding={padding}
         />
       </div>
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1">
         <EmojiBoard emoji={selectedEmoji} select={setSelectedEmoji} />
         <ControlsPanel
           color={bgColor}
