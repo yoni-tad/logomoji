@@ -26,7 +26,7 @@ export default function App() {
       <div className="sticky top-0 z-50">
         <div className="flex justify-between items-center py-4">
           <p className="text-3xl font-semibold">Logomoji</p>
-          <a href="">
+          <a href="" target="_tab">
             <svg
               className="h-8 w-8"
               fill="#000000"

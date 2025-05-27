@@ -6,8 +6,10 @@ export default function LogoPreview(props) {
   const borderRadius = props.borderRadius;
   const bgColor = props.bgColor;
   const iconSize = props.iconSize;
+  const padding = props.padding;
 
-  const canvasRef = useRef(null);
+  const width = 380;
+  const height = 380;
 
   useEffect(() => {
     const canvas = boarderRef.current;
@@ -18,10 +20,7 @@ export default function LogoPreview(props) {
 
       ctx.beginPath();
       ctx.moveTo(30, 0);
-      ctx.arcTo(380, 0, 380, 380, borderRadius);
-      ctx.arcTo(380, 380, 0, 380, borderRadius);
-      ctx.arcTo(0, 380, 0, 0, borderRadius);
-      ctx.arcTo(0, 0, 380, 0, borderRadius);
+      ctx.roundRect(padding, padding, width - padding * 2, height - padding * 2, borderRadius);
       ctx.closePath();
       ctx.fillStyle = bgColor;
       ctx.fill();
@@ -33,7 +32,7 @@ export default function LogoPreview(props) {
         "px Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif";
       ctx.fillText(emoji, 190, 190);
     }
-  }, [iconSize, emoji, borderRadius, bgColor]);
+  }, [iconSize, emoji, borderRadius, bgColor, padding]);
 
   return <canvas id="imgCanvas" ref={boarderRef}></canvas>;
 }

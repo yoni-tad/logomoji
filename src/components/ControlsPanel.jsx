@@ -54,7 +54,7 @@ export default function ControlsPanel(props) {
         <input
           id="padding-range"
           min={2}
-          max={50}
+          max={40}
           type="range"
           value={props.padding}
           onChange={(e) => props.setPadding(Number(e.target.value))}
