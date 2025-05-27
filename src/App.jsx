@@ -26,7 +26,7 @@ export default function App() {
       <div className="sticky top-0 z-50">
         <div className="flex justify-between items-center py-4">
           <p className="text-3xl font-semibold">Logomoji</p>
-          <a href="" target="_tab">
+          <a href="https://github.com/yoni-tad/logomoji" target="_tab">
             <svg
               className="h-8 w-8"
               fill="#000000"
@@ -63,7 +63,7 @@ export default function App() {
       <div className="sticky">
         <button
           onClick={handleDownload}
-          className="w-full bg-pink-400 hover:bg-pink-300 py-3 px-4 text-2xl font-semibold rounded-xl"
+          className="w-full bg-pink-400 hover:bg-pink-300 py-3 px-4 text-xl font-semibold rounded-xl"
         >
           Download
         </button>

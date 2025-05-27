@@ -8,14 +8,14 @@ export default function LogoPreview(props) {
   const iconSize = props.iconSize;
   const padding = props.padding;
 
-  const width = 380;
-  const height = 380;
+  const width = 350;
+  const height = 350;
 
   useEffect(() => {
     const canvas = boarderRef.current;
     if (canvas) {
-      canvas.width = 380;
-      canvas.height = 380;
+      canvas.width = width;
+      canvas.height = height;
       const ctx = canvas.getContext("2d");
 
       ctx.beginPath();
@@ -30,7 +30,7 @@ export default function LogoPreview(props) {
       ctx.font =
         iconSize +
         "px Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif";
-      ctx.fillText(emoji, 190, 190);
+      ctx.fillText(emoji, height / 2, width / 2);
     }
   }, [iconSize, emoji, borderRadius, bgColor, padding]);
 
