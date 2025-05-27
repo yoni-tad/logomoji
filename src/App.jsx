@@ -21,7 +21,8 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 h-screen max-w-md">
+    <div className="flex flex-col justify-center gap-4 p-4 h-screen max-w-md">
+      <div className="overflow-y-auto overflow-x-hidden">
       {/* nav bar */}
       <div className="z-50">
         <div className="flex justify-between items-center py-4">
@@ -60,7 +61,8 @@ export default function App() {
           setPadding={setPadding}
         />
       </div>
-      <div className="sticky">
+      </div>
+      <div className="sticky bottom-0 z-50">
         <button
           onClick={handleDownload}
           className="w-full bg-pink-400 hover:bg-pink-300 py-3 px-4 text-xl font-semibold rounded-xl"

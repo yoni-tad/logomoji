@@ -19,7 +19,7 @@ export default function EmojiBoard(props) {
               key={emoji}
               onClick={() => props.select(emoji)}
               className={
-                "cursor-pointer p-3 px-8 text-center rounded-lg " +
+                "cursor-pointer p-2 px-6 text-center rounded-lg " +
                 (emoji === props.emoji ? "bg-pink-400" : "bg-pink-200")
               }
             >
@@ -29,7 +29,7 @@ export default function EmojiBoard(props) {
         })}
         <p
           onClick={() => setShowEmoji(true)}
-          className="cursor-pointer p-3 px-6 text-center rounded-lg bg-black text-white"
+          className="cursor-pointer p-2 px-6 text-center rounded-lg bg-black text-white"
         >
           All
         </p>
